@@ -37,9 +37,8 @@ const handleMenuItemClick = (item) => {
     font-size: 1.5rem;
 }
 .p-menubar {
-    background: rgba(255, 255, 255, 0.2);
+    background-color: black;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: none;
     position: fixed;
