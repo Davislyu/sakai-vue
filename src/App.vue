@@ -14,7 +14,7 @@ onMounted(() => {
 <template>
     <div class="background-video">
         <video ref="videoRef" autoplay loop muted playsinline>
-            <source src="./assets/covidBackground.mp4" type="video/mp4" />
+            <source src="./assets/covidBG.mp4" type="video/mp4" />
             Your browser does not support the video tag.
         </video>
     </div>
@@ -54,5 +54,8 @@ onMounted(() => {
 }
 .main-content {
     padding-top: 4rem;
+}
+.p-menubar-item-content {
+    color: red;
 }
 </style>
