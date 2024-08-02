@@ -18,6 +18,8 @@ declare module 'vue' {
     Column: typeof import('primevue/column')['default']
     ContextMenu: typeof import('primevue/contextmenu')['default']
     DataTable: typeof import('primevue/datatable')['default']
+    Fieldset: typeof import('primevue/fieldset')['default']
+    FieldsetCard: typeof import('./src/components/FieldsetCard.vue')['default']
     FileUpload: typeof import('primevue/fileupload')['default']
     FloatingConfigurator: typeof import('./src/components/FloatingConfigurator.vue')['default']
     Fluid: typeof import('primevue/fluid')['default']
