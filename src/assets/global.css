@@ -1,0 +1,79 @@
+/* src/assets/custom.css */
+:root {
+    --p-card-background: transparent !important;
+}
+body .p-fieldset {
+    background: rgba(255, 0, 0, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: white;
+}
+
+body .p-fieldset-legend {
+    background: #fff; /* Custom legend background */
+    border-color: #ccc; /* Custom legend border color */
+}
+
+body .p-fieldset-toggle-button {
+    color: #333; /* Custom button color */
+    background-color: transparent;
+}
+
+body .p-fieldset-toggle-button:hover {
+    color: white; /* Custom button color */
+    background-color: black;
+}
+
+body .p-card-body {
+    background: transparent;
+    box-shadow: 0 8px 32px 0 rgba(222, 3, 3, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: white;
+}
+body .p-accordionheader {
+    background: rgba(185, 8, 18, 0.2);
+    color: white;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+body .p-accordionpanel:not(.p-accordionpanel-active):not(.p-disabled) > .p-accordionheader:hover {
+    /* From https://css.glass */
+    background: rgba(251, 251, 251, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: white;
+}
+body .p-accordionpanel:not(.p-disabled).p-accordionpanel-active > .p-accordionheader {
+    color: white;
+    background-color: transparent;
+}
+
+body .p-accordionpanel {
+    border: none;
+}
+body .p-accordioncontent-content {
+    color: white;
+    background: transparent;
+}
+
+body .p-accordionpanel:not(.p-disabled).p-accordionpanel-active > .p-accordionheader {
+    background-color: transparent;
+    color: white;
+}
+
+body .p-accordionpanel:not(.p-disabled).p-accordionpanel-active > .p-accordionheader:hover {
+    /* From https://css.glass */
+    background: rgba(251, 251, 251, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: white;
+}

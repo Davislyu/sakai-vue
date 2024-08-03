@@ -43,6 +43,7 @@ const handleMenuItemClick = (item) => {
     border: none;
     position: fixed;
     width: 100%;
+    border-radius: 0px;
 }
 
 a {

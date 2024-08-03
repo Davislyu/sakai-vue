@@ -1,14 +1,15 @@
-import { createApp } from 'vue';
-import App from './App.vue';
-import router from './router';
-import VueWriter from 'vue-writer';
 import Aura from '@primevue/themes/aura';
 import PrimeVue from 'primevue/config';
 import ConfirmationService from 'primevue/confirmationservice';
 import ToastService from 'primevue/toastservice';
+import { createApp } from 'vue';
+import VueWriter from 'vue-writer';
+import App from './App.vue';
+import router from './router';
 
 import '@/assets/styles.scss';
 import '@/assets/tailwind.css';
+import './assets/global.css';
 
 const app = createApp(App);
 app.use(VueWriter);

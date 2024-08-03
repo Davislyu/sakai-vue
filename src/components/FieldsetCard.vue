@@ -5,11 +5,11 @@ const props = defineProps({ cardTxt: String });
 </script>
 
 <template>
-    <Fieldset legend="Legend" :toggleable="true">
+    <Fieldset legend="Toggle" class="" :toggleable="true">
         <p>
             {{ props.cardTxt }}
         </p>
     </Fieldset>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss"></style>

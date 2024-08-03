@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
 import Navbar from './components/Navbar.vue';
 
 const videoRef = ref(null);
@@ -43,14 +43,15 @@ onMounted(() => {
     height: 100%;
     z-index: -1;
     overflow: hidden;
+    filter: brightness(25%);
 }
 
 .background-video video {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(50%);
     pointer-events: none;
+    filter: opacity(1.1);
 }
 .main-content {
     padding-top: 4rem;
