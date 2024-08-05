@@ -37,6 +37,8 @@ declare module 'vue' {
     Navbar: typeof import('./src/components/Navbar.vue')['default']
     OverlayBadge: typeof import('primevue/overlaybadge')['default']
     PanelMenu: typeof import('primevue/panelmenu')['default']
+    ProccesFlowChart: typeof import('./src/components/proccesFlowChart.vue')['default']
+    ProcessFlowChart: typeof import('./src/components/ProcessFlowChart.vue')['default']
     ProgressBar: typeof import('primevue/progressbar')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

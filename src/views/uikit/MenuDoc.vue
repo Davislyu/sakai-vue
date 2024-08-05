@@ -44,6 +44,7 @@ const handleMenuItemClick = (item) => {
     position: fixed;
     width: 100%;
     border-radius: 0px;
+    z-index: 400000;
 }
 
 a {

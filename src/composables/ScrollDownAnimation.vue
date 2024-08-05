@@ -2,7 +2,7 @@
 <template>
     <div class="relative h-40 scroll-down-animation">
         <video autoplay loop muted playsinline class="scroll-down-video">
-            <source src="/public/ScrollDownUpAnimation.webm" type="video/webm" />
+            <source src="/ScrollDownUpAnimation.webm" type="video/webm" />
             Your browser does not support the video tag.
         </video>
     </div>

@@ -31,7 +31,7 @@ onMounted(() => {
     <div class="homepage__typed-container homepage__typed-container--secondary">
         <span class="homepage__typed-text" id="homepage__typed-message2"></span>
     </div>
-    <div class="absolute bottom-0 homepage__scroller left-1/2"><ScrollDownAnimation /></div>
+    <div class="absolute bottom-0 homepage__scroller left-1/2 translate-x-[-50%]"><ScrollDownAnimation /></div>
 </template>
 
 <style>
