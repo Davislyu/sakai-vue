@@ -101,8 +101,8 @@ const events = ref([
         position: relative;
     }
     &--paragraph {
+        color: #ccc;
     }
-    color: #ccc;
 }
 
 @media screen and (max-width: 960px) {
