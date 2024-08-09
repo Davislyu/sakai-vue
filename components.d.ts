@@ -39,6 +39,7 @@ declare module 'vue' {
     PanelMenu: typeof import('primevue/panelmenu')['default']
     ProccesFlowChart: typeof import('./src/components/proccesFlowChart.vue')['default']
     ProcessFlowChart: typeof import('./src/components/ProcessFlowChart.vue')['default']
+    ProcessFlowTemplating: typeof import('./src/components/ProcessFlowTemplating.vue')['default']
     ProgressBar: typeof import('primevue/progressbar')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

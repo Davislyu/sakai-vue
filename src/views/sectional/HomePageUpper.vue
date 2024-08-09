@@ -22,8 +22,8 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="homepage__title-container">
-        <h2 class="text-3xl homepage__title">Analysis and classification of tweets on the topic of corona vaccines With the help of natural language processing models</h2>
+    <div class="homepage__title-container mt-[-60px] mr-[100px] sm:mr-0">
+        <h2 class="mr-4 text-4xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl homepage__title md:w-[60%] p-4 mr-auto">Analysis and classification of tweets on the topic of corona vaccines With the help of natural language processing models</h2>
     </div>
     <div class="homepage__typed-container">
         <span class="homepage__typed-text" id="homepage__typed-message"></span>
@@ -31,7 +31,9 @@ onMounted(() => {
     <div class="homepage__typed-container homepage__typed-container--secondary">
         <span class="homepage__typed-text" id="homepage__typed-message2"></span>
     </div>
-    <div class="absolute bottom-0 homepage__scroller left-1/2 translate-x-[-50%]"><ScrollDownAnimation /></div>
+    <div class="absolute bottom-0 homepage__scroller left-1/2 translate-x-[-50%]">
+        <ScrollDownAnimation />
+    </div>
 </template>
 
 <style>
@@ -67,11 +69,16 @@ onMounted(() => {
     display: flex;
     justify-content: end;
     font-size: xx-large;
+    position: relative;
 }
 
 .homepage__title {
-    color: red;
-    width: 60%;
+    background: #ff0000;
+    background: linear-gradient(to right, #ff0000 0%, #710b0a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Shrikhand', serif;
+    position: relative;
 }
 
 .homepage__cards-container {
@@ -82,11 +89,19 @@ onMounted(() => {
     width: 50%;
 }
 
+.homepage__typed-text {
+    font-size: clamp(1rem, 10vw, 4rem);
+    color: red;
+    font-weight: 600;
+    font-size: large;
+}
+
 .homepage__card-title {
     margin-bottom: 1rem;
     font-size: 1.25rem;
     font-weight: 600;
 }
+
 .homepage__researchContent {
     display: flex;
     width: 75vw;

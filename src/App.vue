@@ -59,4 +59,7 @@ onMounted(() => {
 .p-menubar-item-content {
     color: red;
 }
+a {
+    color: red;
+}
 </style>

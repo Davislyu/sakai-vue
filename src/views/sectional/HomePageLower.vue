@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-    <div class="flex flex-col gap-20 xl:flex-row">
+    <div class="flex flex-col gap-20 font-semibold homepage_lower xl:flex-row">
         <div class="flex flex-col w-4/5 gap-10 content homepage__researchContent">
             <CardTitle card_title="Research Question:" card_content="How do conspiracy theories related to the COVID-19 pandemic spread on the Twitter platform, and how do they influence public opinion and discourse?" />
             <h2 class="text-2xl text-center text-white">Research hypothesis's:</h2>
@@ -32,7 +32,7 @@
                 </AccordionPanel>
             </Accordion>
         </div>
-        <div class="flex justify-center covid-logo-section">
+        <div class="flex justify-center hidden xl:flex covid-logo-section">
             <img class="justify-center w-[200px] md:max-h-[300px] md:min-w-[300px]" src="/covid19.png" alt="covidIMG" />
         </div>
     </div>
@@ -46,13 +46,6 @@
     flex-direction: column;
     justify-content: center;
     margin-top: 10vh;
-}
-
-.homepage__typed-text {
-    font-size: clamp(1rem, 10vw, 4rem);
-    color: red;
-    font-weight: 300;
-    font-size: large;
 }
 
 .homepage__typed-container .typed-cursor {
@@ -77,11 +70,6 @@
     font-size: xx-large;
 }
 
-.homepage__title {
-    color: red;
-    width: 60%;
-}
-
 .homepage__cards-container {
     display: grid;
     margin: 0 auto;
@@ -95,14 +83,7 @@
     font-size: 1.25rem;
     font-weight: 600;
 }
-.homepage__researchContent {
-    display: flex;
-    width: 75vw;
-    margin: 0 auto;
-    justify-content: center;
-}
 
 .covid-logo-section {
-    align-items: center;
 }
 </style>
