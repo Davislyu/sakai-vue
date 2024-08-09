@@ -57,22 +57,18 @@ const events = ref([
     <div class="grid grid-cols-12 gap-8"></div>
     <div class="col-span-full">
         <div class="bg-transparent card">
-            <!-- <div class="mb-4 text-xl font-semibold">
-                This timeline represents the key steps undertaken in my project to classify tweets regarding COVID-19 vaccines. Starting with data collection from Twitter, the process includes cleaning the data, embedding using advanced models like
-                CT-BERT and SBERT, dimensional reduction through PCA, and testing various classifiers. The final stages involve training the model, making classifications, and analyzing the results to evaluate the model's performance.
-            </div> -->
-            <header class="flex flex-wrap justify-center align center">
-                <div class="flex flex-col w-1/2 content">
-                    <h1>Unraveling the COVID-19 Vaccine Conversation</h1>
-                    <p>
+            <header v-motion-fade class="flex flex-col-reverse items-center justify-around gap-14 md:flex-row process__header">
+                <div class="flex flex-col gap-5 mr-auto md:w-1/2 process__header__content">
+                    <h1 class="text-4xl process__header__content--title sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl">Unraveling the COVID-19 Vaccine Conversation:</h1>
+                    <p class="process__header__content--paragraph sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
                         Dive into this captivating timeline showcasing the intricate process of classifying tweets about COVID-19 vaccines. From harvesting Twitter data to leveraging advanced language models, this project offers a unique window into
                         the evolving vaccine narrative. Prepare to be amazed as we navigate the breakthroughs and challenges of this innovative endeavor!
                     </p>
                 </div>
-                <img src="/covidLogoProcess.png" alt="covidIMG" class="justify-center w-[200px] md:max-h-[300px] md:min-w-[300px]" />
+                <img src="/covidLogoProcess.png" alt="covidIMG" class="justify-center w-[300px] md:w-[400px] lg:w-[700px]" />
             </header>
 
-            <Timeline :value="events" align="alternate" class="customized-timeline">
+            <Timeline :value="events" align="alternate" class="mt-32 customized-timeline">
                 <template #marker="slotProps">
                     <span class="z-10 flex items-center justify-center w-8 h-8 text-black rounded-full shadow-sm" :style="{ backgroundColor: slotProps.item.color }">
                         <i :class="slotProps.item.icon"></i>
@@ -95,6 +91,20 @@ const events = ref([
 </template>
 
 <style lang="scss" scoped>
+.process__header__content {
+    &--title {
+        background: #ff0000;
+        background: linear-gradient(to right, #ff0000 0%, #710b0a 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: 'Shrikhand', serif;
+        position: relative;
+    }
+    &--paragraph {
+    }
+    color: #ccc;
+}
+
 @media screen and (max-width: 960px) {
     ::v-deep(.customized-timeline) {
         .p-timeline-event:nth-child(even) {

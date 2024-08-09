@@ -51,4 +51,7 @@ a {
     display: flex;
     padding: 0.6rem;
 }
+.p-menubar-item {
+    background-color: red !important;
+}
 </style>

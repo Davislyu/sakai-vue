@@ -23,7 +23,9 @@ onMounted(() => {
 
 <template>
     <div class="homepage__title-container mt-[-60px] mr-[100px] sm:mr-0">
-        <h2 class="mr-4 text-4xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl homepage__title md:w-[60%] p-4 mr-auto">Analysis and classification of tweets on the topic of corona vaccines With the help of natural language processing models</h2>
+        <h2 class="mr-4 p-10 text-4xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl homepage__title md:w-[60%] p-4 mr-auto">
+            Analysis and classification of tweets on the topic of corona vaccines With the help of natural language processing models
+        </h2>
     </div>
     <div class="homepage__typed-container">
         <span class="homepage__typed-text" id="homepage__typed-message"></span>
@@ -47,10 +49,6 @@ onMounted(() => {
 }
 
 .homepage__typed-text {
-    color: red;
-}
-
-.homepage__typed-container .typed-cursor {
     color: red;
 }
 
