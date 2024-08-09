@@ -12,8 +12,13 @@ const nestedMenuitems = ref([
     },
     {
         label: 'Process',
-        icon: 'pi pi-fw pi-spin pi-cog',
+        icon: 'pi pi-list',
         route: '/processFlow'
+    },
+    {
+        label: 'Results',
+        icon: 'pi pi-chart-bar',
+        route: '/Results'
     }
 ]);
 
@@ -27,14 +32,16 @@ const handleMenuItemClick = (item) => {
 <template>
     <Menubar :model="nestedMenuitems" @item-click="handleMenuItemClick">
         <template #item="{ item }">
-            <a @click.prevent="handleMenuItemClick(item)" href="javascript:void(0)"> <i :class="item.icon"></i> {{ item.label }} </a></template
-        >
+            <div @click.prevent="handleMenuItemClick(item)" class="flex items-center justify-center text-center p-[2px] text-red-600 navitem cursor-pointer">
+                <a class="p-[0.6rem]" href="javascript:void(0)"> {{ item.label }} </a>
+                <i :class="item.icon"></i>
+            </div>
+        </template>
     </Menubar>
 </template>
 
 <style scoped>
 .pi {
-    font-size: 1.5rem;
 }
 .p-menubar {
     background-color: black;
@@ -47,10 +54,6 @@ const handleMenuItemClick = (item) => {
     z-index: 400000;
 }
 
-a {
-    display: flex;
-    padding: 0.6rem;
-}
 .p-menubar-item {
     background-color: red !important;
 }
