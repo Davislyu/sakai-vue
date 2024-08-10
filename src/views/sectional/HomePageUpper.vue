@@ -75,7 +75,7 @@ onMounted(() => {
     background: linear-gradient(to right, #ff0000 0%, #710b0a 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: 'Shrikhand', serif;
+    font-family: 'IBM Plex Mono', monospace;
     position: relative;
 }
 
