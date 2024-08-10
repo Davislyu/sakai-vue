@@ -35,6 +35,11 @@ onMounted(() => {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
 }
+.p-menubar-mobile .p-menubar-root-list {
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+}
 .background-video {
     position: fixed;
     top: 0;
