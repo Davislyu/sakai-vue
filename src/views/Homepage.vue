@@ -8,7 +8,7 @@ import HomePageUpper from './sectional/HomePageUpper.vue';
         <div v-motion-pop-visible class="h-[100dvh] p-10 homepage__upperPart">
             <HomePageUpper />
         </div>
-        <div v-motion-pop-visible class="homepage_lowerPart w-4/5 mx-auto h-[100dvh]">
+        <div v-motion-pop-visible class="w-4/5 mx-auto homepage_lowerPart">
             <HomePageLower />
         </div>
     </main>
