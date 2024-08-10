@@ -26,22 +26,23 @@ function setColorOptions() {
     const surfaceBorder = 'rgba(255, 0, 0, 0.3)'; // Light red border color
 
     barData.value = {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        labels: ['Retweets', 'Likes', 'Replies', 'Has URL', 'Has Media'], // Updated labels to match the metrics
         datasets: [
             {
-                label: 'My First dataset',
+                label: 'Misinformation Metrics',
                 backgroundColor: primaryRed,
                 borderColor: primaryRed,
-                data: [65, 59, 80, 81, 56, 55, 40]
+                data: [0.1946, 0.8507, 0.1013, 0.4129, 0.0891] // Normalized values for Misinformation
             },
             {
-                label: 'My Second dataset',
+                label: 'Counter-Misinformation Metrics',
                 backgroundColor: secondaryRed,
                 borderColor: secondaryRed,
-                data: [28, 48, 40, 19, 86, 27, 90]
+                data: [0.1985, 0.8323, 0.0961, 0.4405, 0.0957] // Normalized values for Counter-Misinformation
             }
         ]
     };
+
     barOptions.value = {
         plugins: {
             legend: {
@@ -98,22 +99,65 @@ function setColorOptions() {
     };
 
     lineData.value = {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        labels: [
+            'Jan 2020',
+            'Feb 2020',
+            'Mar 2020',
+            'Apr 2020',
+            'May 2020',
+            'Jun 2020',
+            'Jul 2020',
+            'Aug 2020',
+            'Sep 2020',
+            'Oct 2020',
+            'Nov 2020',
+            'Dec 2020',
+            'Jan 2021',
+            'Feb 2021',
+            'Mar 2021',
+            'Apr 2021',
+            'May 2021',
+            'Jun 2021',
+            'Jul 2021',
+            'Aug 2021',
+            'Sep 2021',
+            'Oct 2021',
+            'Nov 2021',
+            'Dec 2021',
+            'Jan 2022',
+            'Feb 2022',
+            'Mar 2022',
+            'Apr 2022',
+            'May 2022',
+            'Jun 2022',
+            'Jul 2022',
+            'Aug 2022',
+            'Sep 2022',
+            'Oct 2022'
+        ],
         datasets: [
             {
-                label: 'First Dataset',
-                data: [65, 59, 80, 81, 56, 55, 40],
+                label: 'Counter-Misinformation',
+                data: [65, 211, 940, 1388, 1136, 595, 934, 890, 982, 928, 1814, 3551, 3034, 2089, 2771, 3378, 3247, 3572, 5021, 6176, 5299, 3989, 3710, 5281, 4937, 2665, 1768, 1881, 1501, 1470, 1849, 1649, 1453, 510],
                 fill: false,
                 backgroundColor: primaryRed,
                 borderColor: primaryRed,
                 tension: 0.4
             },
             {
-                label: 'Second Dataset',
-                data: [28, 48, 40, 19, 86, 27, 90],
+                label: 'Misinformation',
+                data: [99, 383, 1698, 2123, 1846, 1046, 1736, 1824, 1794, 1782, 2978, 5915, 5289, 4087, 5117, 6664, 6315, 6103, 12825, 17904, 15825, 12319, 11984, 18126, 19326, 9341, 5948, 6186, 5477, 5746, 7667, 5965, 4526, 1549],
                 fill: false,
                 backgroundColor: secondaryRed,
                 borderColor: secondaryRed,
+                tension: 0.4
+            },
+            {
+                label: 'Neutral',
+                data: [67, 409, 3199, 5183, 4322, 1967, 2641, 2563, 2119, 2108, 3750, 8099, 10073, 6394, 7988, 8300, 8037, 7135, 8488, 11917, 9603, 6755, 6469, 9111, 7468, 3969, 2773, 2777, 3161, 2433, 2564, 2157, 2334, 795],
+                fill: false,
+                backgroundColor: 'rgba(192, 192, 192, 0.6)', // Neutral color
+                borderColor: 'rgba(192, 192, 192, 0.8)', // Neutral color
                 tension: 0.4
             }
         ]
@@ -150,14 +194,23 @@ function setColorOptions() {
     };
 
     polarData.value = {
+        labels: ['Retweets', 'Likes', 'Replies', 'Has URL', 'Has Media'],
         datasets: [
             {
-                data: [11, 16, 7, 3],
-                backgroundColor: [primaryRed, secondaryRed, surfaceBorder, textColorSecondary],
-                label: 'My dataset'
+                label: 'Misinformation Metrics',
+                data: [0.1946, 0.8507, 0.1013, 0.4129, 0.0891], // Normalized values
+                backgroundColor: 'rgba(255, 0, 0, 0.2)', // primaryRed with 20% opacity
+                borderColor: primaryRed,
+                hoverBackgroundColor: 'rgba(255, 0, 0, 0.5)' // primaryRed with 50% opacity on hover
+            },
+            {
+                label: 'Counter-Misinformation Metrics',
+                data: [0.1985, 0.8323, 0.0961, 0.4405, 0.0957], // Normalized values
+                backgroundColor: 'rgba(255, 102, 102, 0.2)', // secondaryRed with 20% opacity
+                borderColor: secondaryRed,
+                hoverBackgroundColor: 'rgba(255, 102, 102, 0.5)' // secondaryRed with 50% opacity on hover
             }
-        ],
-        labels: ['Red1', 'Red2', 'Red3', 'Red4']
+        ]
     };
 
     polarOptions.value = {
@@ -172,31 +225,43 @@ function setColorOptions() {
             r: {
                 grid: {
                     color: surfaceBorder
+                },
+                angleLines: {
+                    color: textColorSecondary
+                },
+                suggestedMin: 0, // Start the scale at 0
+                suggestedMax: 1, // Set the maximum to 1 or another appropriate value
+                ticks: {
+                    stepSize: 0.2, // Smaller steps to make the differences more noticeable
+                    color: textColor,
+                    backdropColor: 'rgba(0, 0, 0, 0)' // Transparent backdrop for better visibility
                 }
             }
         }
     };
 
     radarData.value = {
-        labels: ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'],
+        labels: ['Retweets', 'Likes', 'Replies', 'Has URL', 'Has Media'],
         datasets: [
             {
-                label: 'My First dataset',
+                label: 'Misinformation Metrics',
                 borderColor: primaryRed,
+                backgroundColor: 'rgba(255, 0, 0, 0.2)',
                 pointBackgroundColor: primaryRed,
                 pointBorderColor: primaryRed,
                 pointHoverBackgroundColor: textColor,
                 pointHoverBorderColor: primaryRed,
-                data: [65, 59, 90, 81, 56, 55, 40]
+                data: [0.1946, 0.8507, 0.1013, 0.4129, 0.0891] // Normalized values
             },
             {
-                label: 'My Second dataset',
+                label: 'Counter-Misinformation Metrics',
                 borderColor: secondaryRed,
+                backgroundColor: 'rgba(255, 102, 102, 0.2)',
                 pointBackgroundColor: secondaryRed,
                 pointBorderColor: secondaryRed,
                 pointHoverBackgroundColor: textColor,
                 pointHoverBorderColor: secondaryRed,
-                data: [28, 48, 40, 19, 96, 27, 100]
+                data: [0.1985, 0.8323, 0.0961, 0.4405, 0.0957] // Normalized values
             }
         ]
     };
@@ -213,6 +278,15 @@ function setColorOptions() {
             r: {
                 grid: {
                     color: textColorSecondary
+                },
+                angleLines: {
+                    color: textColorSecondary
+                },
+                suggestedMin: 0, // Start the scale at 0
+                suggestedMax: 1, // Set the maximum to 1 or another appropriate value
+                ticks: {
+                    stepSize: 0.2, // Smaller steps to make the differences more noticeable
+                    color: textColor
                 }
             }
         }
@@ -243,7 +317,7 @@ watch(
         <Fluid class="grid grid-cols-12 gap-8 mt-10">
             <div class="col-span-12 xl:col-span-6">
                 <div class="chartContainer">
-                    <div class="mb-4 text-xl font-semibold">Linear</div>
+                    <div class="mb-4 text-xl font-semibold">Epidemiological Trends in COVID-19 Information: A Two-Year Analysis of Misinformation and Counter-Misinformation</div>
                     <Chart type="line" :data="lineData" :options="lineOptions"></Chart>
                 </div>
             </div>
@@ -293,20 +367,12 @@ watch(
     border: 1px solid rgba(255, 0, 0, 0.3);
     padding: 1rem;
 
-    /* New style */
-    color: white; /* Set text color to white */
+    color: white;
 }
-.process__header__content {
-    &--title {
-        background: #ff0000;
-        background: linear-gradient(to right, #ff0000 0%, #710b0a 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-family: 'IBM Plex Mono', monospace;
-        position: relative;
-    }
-    &--paragraph {
-        color: #ccc;
-    }
+.process__header__content--title {
+    color: red;
+}
+.process__header__content--paragraph {
+    color: #ccc;
 }
 </style>
