@@ -229,44 +229,56 @@ watch(
 </script>
 
 <template>
-    <Fluid class="grid grid-cols-12 gap-8">
-        <div class="col-span-12 xl:col-span-6">
-            <div class="chartContainer">
-                <div class="mb-4 text-xl font-semibold">Linear</div>
-                <Chart type="line" :data="lineData" :options="lineOptions"></Chart>
+    <div class="p-8">
+        <header v-motion-fade class="flex flex-col-reverse items-center justify-between gap-14 md:flex-row-reverse process__header">
+            <div class="flex flex-col gap-5 mr-auto md:w-1/2 process__header__content">
+                <h1 class="text-4xl process__header__content--title sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl">COVID-19 Data Insights</h1>
+                <p class="process__header__content--paragraph sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
+                    Explore key data visualizations that highlight the impact of COVID-19. This page presents charts covering infection rates, vaccination progress, economic effects, and public response, offering a clear overview of the pandemic's
+                    ongoing influence.
+                </p>
             </div>
-        </div>
-        <div class="col-span-12 xl:col-span-6">
-            <div class="chartContainer">
-                <div class="mb-4 text-xl font-semibold">Bar</div>
-                <Chart type="bar" :data="barData" :options="barOptions"></Chart>
+            <!-- <img src="/covidChart.png" alt="covidIMG" class="justify-center w-[300px] md:w-[400px] lg:w-[400px]" /> -->
+        </header>
+        <Fluid class="grid grid-cols-12 gap-8 mt-10">
+            <div class="col-span-12 xl:col-span-6">
+                <div class="chartContainer">
+                    <div class="mb-4 text-xl font-semibold">Linear</div>
+                    <Chart type="line" :data="lineData" :options="lineOptions"></Chart>
+                </div>
             </div>
-        </div>
-        <div class="col-span-12 xl:col-span-6">
-            <div class="flex flex-col items-center chartContainer">
-                <div class="mb-4 text-xl font-semibold">Distribution of Misinformation,Natural Content,and Counter-Misinformation</div>
-                <Chart type="pie" :data="pieData" :options="pieOptions"></Chart>
+            <div class="col-span-12 xl:col-span-6">
+                <div class="chartContainer">
+                    <div class="mb-4 text-xl font-semibold">Bar</div>
+                    <Chart type="bar" :data="barData" :options="barOptions"></Chart>
+                </div>
             </div>
-        </div>
-        <div class="col-span-12 xl:col-span-6">
-            <div class="flex flex-col items-center chartContainer">
-                <div class="mb-4 text-xl font-semibold">Distribution of Misinformation,Natural Content,and Counter-Misinformation</div>
-                <Chart type="doughnut" :data="pieData" :options="pieOptions"></Chart>
+            <div class="col-span-12 xl:col-span-6">
+                <div class="flex flex-col items-center chartContainer">
+                    <div class="mb-4 text-xl font-semibold">Distribution of Misinformation,Natural Content,and Counter-Misinformation</div>
+                    <Chart type="pie" :data="pieData" :options="pieOptions"></Chart>
+                </div>
             </div>
-        </div>
-        <div class="col-span-12 xl:col-span-6">
-            <div class="flex flex-col items-center chartContainer">
-                <div class="mb-4 text-xl font-semibold">Polar Area</div>
-                <Chart type="polarArea" :data="polarData" :options="polarOptions"></Chart>
+            <div class="col-span-12 xl:col-span-6">
+                <div class="flex flex-col items-center chartContainer">
+                    <div class="mb-4 text-xl font-semibold">Distribution of Misinformation,Natural Content,and Counter-Misinformation</div>
+                    <Chart type="doughnut" :data="pieData" :options="pieOptions"></Chart>
+                </div>
             </div>
-        </div>
-        <div class="col-span-12 xl:col-span-6">
-            <div class="flex flex-col items-center chartContainer">
-                <div class="mb-4 text-xl font-semibold">Radar</div>
-                <Chart type="radar" :data="radarData" :options="radarOptions"></Chart>
+            <div class="col-span-12 xl:col-span-6">
+                <div class="flex flex-col items-center chartContainer">
+                    <div class="mb-4 text-xl font-semibold">Polar Area</div>
+                    <Chart type="polarArea" :data="polarData" :options="polarOptions"></Chart>
+                </div>
             </div>
-        </div>
-    </Fluid>
+            <div class="col-span-12 xl:col-span-6">
+                <div class="flex flex-col items-center chartContainer">
+                    <div class="mb-4 text-xl font-semibold">Radar</div>
+                    <Chart type="radar" :data="radarData" :options="radarOptions"></Chart>
+                </div>
+            </div>
+        </Fluid>
+    </div>
 </template>
 
 <style scoped>
@@ -283,5 +295,18 @@ watch(
 
     /* New style */
     color: white; /* Set text color to white */
+}
+.process__header__content {
+    &--title {
+        background: #ff0000;
+        background: linear-gradient(to right, #ff0000 0%, #710b0a 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: 'IBM Plex Mono', monospace;
+        position: relative;
+    }
+    &--paragraph {
+        color: #ccc;
+    }
 }
 </style>
