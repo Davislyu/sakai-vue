@@ -65,7 +65,7 @@ const events = ref([
                         the evolving vaccine narrative. Prepare to be amazed as we navigate the breakthroughs and challenges of this innovative endeavor!
                     </p>
                 </div>
-                <img src="/covidLogoProcess.png" alt="covidIMG" class="justify-center w-[300px] md:w-[400px] lg:w-[700px]" />
+                <img v-motion-roll-visible-right src="/covidLogoProcess.png" alt="covidIMG" class="justify-center w-[300px] md:w-[400px] lg:w-[700px]" />
             </header>
 
             <Timeline :value="events" align="alternate" class="mt-32 customized-timeline">
@@ -90,7 +90,7 @@ const events = ref([
     <div class="col-span-full"></div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .process__header__content {
     &--title {
         background: #ff0000;
