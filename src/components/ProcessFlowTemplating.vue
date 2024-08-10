@@ -54,43 +54,43 @@ const events = ref([
 </script>
 
 <template>
-    <div class="grid grid-cols-12 gap-8"></div>
-    <div class="col-span-full">
-        <div class="p-0 bg-transparent md:p-10 card">
-            <header v-motion-fade class="flex flex-col-reverse items-center justify-around gap-14 md:flex-row process__header">
-                <div class="flex flex-col gap-5 mr-auto md:w-1/2 process__header__content">
-                    <h1 class="text-4xl process__header__content--title sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl">Unraveling the COVID-19 Vaccine Conversation:</h1>
-                    <p class="process__header__content--paragraph sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
-                        Dive into this captivating timeline showcasing the intricate process of classifying tweets about COVID-19 vaccines. From harvesting Twitter data to leveraging advanced language models, this project offers a unique window into
-                        the evolving vaccine narrative. Prepare to be amazed as we navigate the breakthroughs and challenges of this innovative endeavor!
-                    </p>
-                </div>
-                <img v-motion-roll-visible-right src="/covidLogoProcess.png" alt="covidIMG" class="justify-center w-[300px] md:w-[400px] lg:w-[700px]" />
-            </header>
+    <div class="grid grid-cols-12 gap-8">
+        <div class="col-span-full">
+            <div class="p-0 bg-transparent md:p-10 card">
+                <header v-motion-fade class="flex flex-col-reverse items-center justify-around gap-14 md:flex-row process__header">
+                    <div class="flex flex-col gap-5 p-4 mr-auto md:w-1/2 process__header__content">
+                        <h1 class="text-4xl process__header__content--title sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl">Unraveling the COVID-19 Vaccine Conversation:</h1>
+                        <p class="process__header__content--paragraph sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
+                            Dive into this captivating timeline showcasing the intricate process of classifying tweets about COVID-19 vaccines. From harvesting Twitter data to leveraging advanced language models, this project offers a unique window
+                            into the evolving vaccine narrative. Prepare to be amazed as we navigate the breakthroughs and challenges of this innovative endeavor!
+                        </p>
+                    </div>
+                    <img v-motion-roll-visible-right src="/covidLogoProcess.png" alt="covidIMG" class="justify-center w-[300px] md:w-[400px] lg:w-[700px]" />
+                </header>
 
-            <Timeline :value="events" align="alternate" class="mt-32 customized-timeline">
-                <template #marker="slotProps">
-                    <span class="z-10 flex items-center justify-center w-8 h-8 text-black rounded-full shadow-sm" :style="{ backgroundColor: slotProps.item.color }">
-                        <i :class="slotProps.item.icon"></i>
-                    </span>
-                </template>
-                <template #content="slotProps">
-                    <Card v-motion-slide-visible-once-left class="mt-4">
-                        <template #title>
-                            {{ slotProps.item.status }}
-                        </template>
-                        <template #content>
-                            <p>{{ slotProps.item.description }}</p>
-                        </template>
-                    </Card>
-                </template>
-            </Timeline>
+                <Timeline :value="events" align="alternate" class="mt-32 customized-timeline">
+                    <template #marker="slotProps">
+                        <span class="z-10 flex items-center justify-center w-8 h-8 text-black rounded-full shadow-sm" :style="{ backgroundColor: slotProps.item.color }">
+                            <i :class="slotProps.item.icon"></i>
+                        </span>
+                    </template>
+                    <template #content="slotProps">
+                        <Card v-motion-slide-visible-once-left class="mt-4">
+                            <template #title>
+                                {{ slotProps.item.status }}
+                            </template>
+                            <template #content>
+                                <p>{{ slotProps.item.description }}</p>
+                            </template>
+                        </Card>
+                    </template>
+                </Timeline>
+            </div>
         </div>
     </div>
-    <div class="col-span-full"></div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .process__header__content {
     &--title {
         background: #ff0000;
