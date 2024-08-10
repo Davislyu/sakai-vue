@@ -32,9 +32,9 @@
                 </AccordionPanel>
             </Accordion>
         </div>
-        <div class="flex justify-center hidden xl:flex covid-logo-section">
+        <!-- <div class="flex justify-center hidden xl:flex covid-logo-section">
             <img class="justify-center w-[200px] md:max-h-[300px] md:min-w-[300px]" src="/covid19.png" alt="covidIMG" />
-        </div>
+        </div> -->
     </div>
 </template>
 
