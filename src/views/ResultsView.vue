@@ -76,10 +76,10 @@ function setColorOptions() {
     };
 
     pieData.value = {
-        labels: ['A', 'B', 'C'],
+        labels: ['Misinformation', 'Natural', 'Counter-misinformation'],
         datasets: [
             {
-                data: [540, 325, 702],
+                data: [217513, 167128, 80684],
                 backgroundColor: [primaryRed, secondaryRed, surfaceBorder],
                 hoverBackgroundColor: [primaryRed, secondaryRed, surfaceBorder]
             }
@@ -244,13 +244,13 @@ watch(
         </div>
         <div class="col-span-12 xl:col-span-6">
             <div class="flex flex-col items-center chartContainer">
-                <div class="mb-4 text-xl font-semibold">Pie</div>
+                <div class="mb-4 text-xl font-semibold">Distribution of Misinformation,Natural Content,and Counter-Misinformation</div>
                 <Chart type="pie" :data="pieData" :options="pieOptions"></Chart>
             </div>
         </div>
         <div class="col-span-12 xl:col-span-6">
             <div class="flex flex-col items-center chartContainer">
-                <div class="mb-4 text-xl font-semibold">Doughnut</div>
+                <div class="mb-4 text-xl font-semibold">Distribution of Misinformation,Natural Content,and Counter-Misinformation</div>
                 <Chart type="doughnut" :data="pieData" :options="pieOptions"></Chart>
             </div>
         </div>
