@@ -3,7 +3,7 @@
 <template>
     <div class="flex flex-col gap-20 font-semibold homepage_lower xl:flex-row">
         <div class="flex flex-col gap-10 content homepage__researchContent">
-            <CardTitle class="text-2xl" card_title="Research Question:" card_content="How do conspiracy theories related to the COVID-19 pandemic spread on the Twitter platform, and how do they influence public opinion and discourse?" />
+            <CardTitle class="text-xl" card_title="Research Question:" card_content="How do conspiracy theories related to the COVID-19 pandemic spread on the Twitter platform, and how do they influence public opinion and discourse?" />
             <h1 class="text-2xl text-center text-white">Research hypotheses:</h1>
             <Accordion value="0">
                 <AccordionPanel value="0">
@@ -46,7 +46,7 @@
                             misinformation.
                         </p>
                         <div class="w-full mt-10 hypImg__container">
-                            <img class="mx-auto md:max-w-[800px]" src="/hyp1.png" alt="hyp" />
+                            <img class="mx-auto md:max-w-[800px] border rounded-lg" src="/hyp1.png" alt="hyp" />
                         </div>
                     </AccordionContent>
                 </AccordionPanel>
@@ -55,7 +55,7 @@
                     <AccordionContent>
                         <p class="m-0">Time-based Data Analysis: The timeline chart illustrates the number of tweets labeled as "misinformation", "counter-misinformation", and "neutral" from early 2020 to the end of 2022.</p>
                         <div class="w-full mt-10 hypImg__container">
-                            <img class="mx-auto" src="/hyp2.png" alt="hyp" />
+                            <img class="mx-auto md:max-w-[800px] border rounded-lg border rounded-lg" src="/hyp2.png" alt="hyp" />
                         </div>
                         <p class="mt-4">
                             In the timeline graph, we can see a significant rise in misinformation tweets, peaking towards mid-2021. This surge may correspond to significant global events, policy changes, or misleading advertising campaigns during
@@ -74,24 +74,24 @@
                         </p>
                         <p class="pt-4">Results: The word cloud for misinformation includes words that spread doubt and negative feelings about vaccines and COVID-19, such as "fake", "fraud", and "ineffective".</p>
                         <div class="w-full mt-10 hypImg__container">
-                            <img class="mx-auto" src="/hyp3p1.png" alt="hyp" />
+                            <img class="mx-auto md:max-w-[800px] border rounded-lg" src="/hyp3p1.png" alt="hyp" />
                         </div>
                         <p class="mt-4">
                             In contrast, the word cloud for counter-misinformation includes words used to debunk false claims and promote factual information, such as "work", "vaccinated", and "news". The main difference lies in the intention:
                             misinformation aims to sow distrust and fear, while counter-misinformation focuses on providing accurate and supportive content.
                         </p>
                         <div class="w-full mt-10 hypImg__container">
-                            <img class="mx-auto" src="/hyp3p2.png" alt="hyp" />
+                            <img class="mx-auto md:max-w-[800px] border rounded-lg" src="/hyp3p2.png" alt="hyp" />
                         </div>
                         <p>The analysis of words in the cloud clearly distinguishes the language used in misinformation tweets and counter-misinformation tweets, supporting the hypothesis.</p>
                     </AccordionContent>
                 </AccordionPanel>
                 <AccordionPanel value="3">
-                    <AccordionHeader>Research Hypotheses 4 asnwer</AccordionHeader>
+                    <AccordionHeader>Research Hypotheses 4 answer</AccordionHeader>
                     <AccordionContent>
                         <p class="m-0">Box Plot graph representing the time differences between Twitter user registrations according to their classification.</p>
                         <div class="w-full mt-10 hypImg__container">
-                            <img class="mx-auto" src="/hyp4.png" alt="hyp" />
+                            <img class="mx-auto md:max-w-[800px] border rounded-lg" src="/hyp4.png" alt="hyp" />
                         </div>
                         <p class="mt-4">
                             We collected information on the 40 users from the 2 classifications we are examining (20 for each classification) who tweeted the highest number of tweets. We then checked when they registered on Twitter, using additional
