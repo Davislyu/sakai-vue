@@ -5,7 +5,7 @@ import HomePageUpper from './sectional/HomePageUpper.vue';
 
 <template>
     <main class="mt-0 homepage">
-        <div v-motion-pop-visible class="h-[100dvh] homepage__upperPart">
+        <div v-motion-pop-visible class="h-[100dvh] p-10 homepage__upperPart">
             <HomePageUpper />
         </div>
         <div v-motion-pop-visible class="homepage_lowerPart w-4/5 mx-auto h-[100dvh]">
