@@ -5,10 +5,10 @@ import HomePageUpper from './sectional/HomePageUpper.vue';
 
 <template>
     <main class="mt-0 homepage">
-        <div v-motion-pop-visible class="h-[100dvh] p-10 homepage__upperPart">
+        <div v-motion-pop-visible class="h-[100dvh] p-4 homepage__upperPart">
             <HomePageUpper />
         </div>
-        <div v-motion-pop-visible class="w-4/5 mx-auto homepage_lowerPart">
+        <div class="w-4/5 mx-auto homepage_lowerPart">
             <HomePageLower />
         </div>
     </main>
@@ -21,7 +21,6 @@ import HomePageUpper from './sectional/HomePageUpper.vue';
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 10vh;
 }
 .homepage__upperPart {
     transform: none !important;
