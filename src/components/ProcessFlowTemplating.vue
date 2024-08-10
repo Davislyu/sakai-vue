@@ -56,7 +56,7 @@ const events = ref([
 <template>
     <div class="grid grid-cols-12 gap-8"></div>
     <div class="col-span-full">
-        <div class="bg-transparent card">
+        <div class="p-0 bg-transparent md:p-10 card">
             <header v-motion-fade class="flex flex-col-reverse items-center justify-around gap-14 md:flex-row process__header">
                 <div class="flex flex-col gap-5 mr-auto md:w-1/2 process__header__content">
                     <h1 class="text-4xl process__header__content--title sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl">Unraveling the COVID-19 Vaccine Conversation:</h1>
@@ -104,7 +104,10 @@ const events = ref([
         color: #ccc;
     }
 }
-
+.p-card-body {
+    padding: 4px !important;
+    text-align: center;
+}
 @media screen and (max-width: 960px) {
     ::v-deep(.customized-timeline) {
         .p-timeline-event:nth-child(even) {
