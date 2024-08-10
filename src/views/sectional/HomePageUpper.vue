@@ -22,12 +22,10 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="homepage__title-container mt-[-60px] mr-[100px] sm:mr-0">
-        <h2 class="mr-4 p-10 text-4xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl homepage__title md:w-[60%] p-4 mr-auto">
-            Analysis and classification of tweets on the topic of corona vaccines With the help of natural language processing models
-        </h2>
+    <div class="homepage__title-container mt-[30px] pl-4 sm:mr-0">
+        <h2 class="text-xl xs:text-4xl md:text-6xl lg:text-7xl xl:text-8xl homepage__title mt-[30px]">Analysis and classification of tweets on the topic of corona vaccines With the help of natural language processing models</h2>
     </div>
-    <div class="homepage__typed-container">
+    <div class="mt-6 homepage__typed-container">
         <span class="homepage__typed-text" id="homepage__typed-message"></span>
     </div>
     <div class="homepage__typed-container homepage__typed-container--secondary">
@@ -75,7 +73,7 @@ onMounted(() => {
     background: linear-gradient(to right, #ff0000 0%, #710b0a 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Shrikhand', serif;
     position: relative;
 }
 
