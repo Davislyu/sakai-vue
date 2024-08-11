@@ -14,9 +14,10 @@ onMounted(() => {
 <template>
     <div class="background-video">
         <video ref="videoRef" autoplay loop muted playsinline>
-            <source src="./assets/covidBG.mp4" type="video/mp4" />
+            <source src="/covidBG.mp4" type="video/mp4" />
             Your browser does not support the video tag.
         </video>
+        <img src="/StaticBackgroundIMG.png" alt="Static Background" class="static-bg" />
     </div>
     <Navbar />
     <div class="main-content">
@@ -28,17 +29,6 @@ onMounted(() => {
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 * {
     font-family: 'IBM Plex Mono', monospace;
-}
-#pv_id_1_list {
-    background: transparent;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-}
-.p-menubar-mobile .p-menubar-root-list {
-    border-top: none !important;
-    border-left: none !important;
-    border-right: none !important;
 }
 .background-video {
     position: fixed;
@@ -58,12 +48,37 @@ onMounted(() => {
     pointer-events: none;
     filter: opacity(1.1);
 }
+
+.static-bg {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Hide video and show static background image on small screens */
+@media only screen and (max-width: 767px) {
+    .background-video video {
+        display: none;
+    }
+
+    .static-bg {
+        display: block;
+    }
+}
+
 .main-content {
     padding-top: 4rem;
 }
+
 .p-menubar-item-content {
     color: red;
 }
+
 a {
     color: red;
 }
