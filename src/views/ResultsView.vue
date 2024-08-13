@@ -163,36 +163,6 @@ function setColorOptions() {
         ]
     };
 
-    lineOptions.value = {
-        plugins: {
-            legend: {
-                labels: {
-                    color: textColor
-                }
-            }
-        },
-        scales: {
-            x: {
-                ticks: {
-                    color: textColorSecondary
-                },
-                grid: {
-                    color: surfaceBorder,
-                    drawBorder: false
-                }
-            },
-            y: {
-                ticks: {
-                    color: textColorSecondary
-                },
-                grid: {
-                    color: surfaceBorder,
-                    drawBorder: false
-                }
-            }
-        }
-    };
-
     polarData.value = {
         labels: ['Retweets', 'Likes', 'Replies', 'Has URL', 'Has Media'],
         datasets: [
@@ -314,39 +284,23 @@ watch(
             </div>
             <!-- <img src="/covidChart.png" alt="covidIMG" class="justify-center w-[300px] md:w-[400px] lg:w-[400px]" /> -->
         </header>
-        <Fluid class="grid grid-cols-12 gap-8 mt-10">
-            <div class="col-span-12 xl:col-span-6">
-                <div class="chartContainer">
+        <Fluid class="grid-cols-10 gap-8 w-full mx-auto md:w-[70%] mt-20">
+            <div class="col-span-12xl:col-span-6">
+                <div class="mt-10 chartContainer">
                     <div class="mb-4 text-xl font-semibold">Epidemiological Trends in COVID-19 Information: A Two-Year Analysis of Misinformation and Counter-Misinformation</div>
                     <Chart type="line" :data="lineData" :options="lineOptions"></Chart>
                 </div>
             </div>
+
             <div class="col-span-12 xl:col-span-6">
-                <div class="chartContainer">
-                    <div class="mb-4 text-xl font-semibold">Bar</div>
-                    <Chart type="bar" :data="barData" :options="barOptions"></Chart>
-                </div>
-            </div>
-            <div class="col-span-12 xl:col-span-6">
-                <div class="flex flex-col items-center chartContainer">
-                    <div class="mb-4 text-xl font-semibold">Distribution of Misinformation,Natural Content,and Counter-Misinformation</div>
-                    <Chart type="pie" :data="pieData" :options="pieOptions"></Chart>
-                </div>
-            </div>
-            <div class="col-span-12 xl:col-span-6">
-                <div class="flex flex-col items-center chartContainer">
+                <div class="flex flex-col items-center mt-10 chartContainer">
                     <div class="mb-4 text-xl font-semibold">Distribution of Misinformation,Natural Content,and Counter-Misinformation</div>
                     <Chart type="doughnut" :data="pieData" :options="pieOptions"></Chart>
                 </div>
             </div>
+
             <div class="col-span-12 xl:col-span-6">
-                <div class="flex flex-col items-center chartContainer">
-                    <div class="mb-4 text-xl font-semibold">Polar Area</div>
-                    <Chart type="polarArea" :data="polarData" :options="polarOptions"></Chart>
-                </div>
-            </div>
-            <div class="col-span-12 xl:col-span-6">
-                <div class="flex flex-col items-center chartContainer">
+                <div class="flex flex-col items-center mt-10 chartContainer">
                     <div class="mb-4 text-xl font-semibold">Radar</div>
                     <Chart type="radar" :data="radarData" :options="radarOptions"></Chart>
                 </div>
@@ -364,7 +318,7 @@ watch(
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 0, 0, 0.3);
+
     padding: 1rem;
 
     color: white;
